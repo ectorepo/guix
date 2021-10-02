@@ -1,3 +1,22 @@
 #+title:    Ectorepo: Guix
 #+author:   David Conner
 #+email: noreply@te.xel.io
+
+
+**** TODO add sourcehut remote and:
++ RDE project: https://sr.ht/abcdw/rde/
+
+#+begin_src xml
+  <project path="guix-home/rde"
+           name="abcdw/rde"
+           remote="github"
+           groups="rde,guixhome" />
+#+end_src
+
+**** TODO add Guix/Home profiles
++ Guix Home: https://git.sr.ht/~krevedkokun/guix-channel
++ Guix Home: https://hg.sr.ht/~yoctocell/guixrc (mercurial)
++ Guix Home: https://git.ht/~abcdw/nonrde/
++ RDE: https://git.sr.ht/~abcdw/rde/
+
+**** TODO add a few examples of guix channels
