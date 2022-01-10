@@ -8,5 +8,6 @@
           fetch="https://bitbucket.org" />
   <remote name="savannah"
           fetch="https://git.savannah.gnu.org/git" />
-
+  <remote name="sourcehut_abcdw"
+          fetch="https://git.sr.ht/~abcdw" />
 </manifest>

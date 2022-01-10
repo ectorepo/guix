@@ -46,4 +46,8 @@
            name="guix/videos"
            groups="guixproject,web" />
 
+  <project path="channels/flatwhatson" name="daviwil/channel-x" groups="channels" remote="github"/>
+  <project path="channels/flatwhatson" name="flatwhatson/guix-channel" groups="channels" remote="github"/>
+  <project path="channels/nonguix" name="nonguix/nonguix" groups="channels" remote="gitlab"/>
+  <project path="channels/rde" name="rde" groups="channels" remote="sourcehut_abcdw"/>
 </manifest>
