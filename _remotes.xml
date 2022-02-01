@@ -10,4 +10,6 @@
           fetch="https://git.savannah.gnu.org/git" />
   <remote name="sourcehut_abcdw"
           fetch="https://git.sr.ht/~abcdw" />
+  <remote name="sourcehut_guixrus"
+          fetch="https://git.sr.ht/~whereiseveryone" />
 </manifest>

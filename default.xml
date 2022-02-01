@@ -1,53 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest>
   <include name="_remotes.xml" />
+  <default remote="savannah" sync-j="8" revision="refs/heads/master" />
 
-  <default remote="savannah"
-           sync-j="8"
-           revision="refs/heads/master" />
-
-  <project path="guix"
-           name="guix"
-           groups="core,guixproject" />
-
-  <project path="bootstrappable"
-           name="guix/bootstrappable"
-           groups="guixproject,web" />
-
-  <project path="data-service"
-           name="guix/data-service"
-           groups="guixproject" />
-
-  <project path="dhcp"
-           name="guix/dhcp"
-           groups="guixproject" />
-
-  <project path="emacs-guix"
-           name="guix/emacs-guix"
-           groups="guixproject" />
-
-  <project path="gnunet"
-           name="guix/gnunet"
-           groups="guixproject" />
-
-  <project path="guix-artwork"
-           name="guix/guix-artwork"
-           groups="guixproject,web" />
-
-  <project path="guix-cuirass"
-           name="guix/guix-cuirass"
-           groups="guixproject,web" />
-
-  <project path="maintenance"
-           name="guix/maintenance"
-           groups="guixproject,web" />
-
-  <project path="videos"
-           name="guix/videos"
-           groups="guixproject,web" />
+  <project path="guix" name="guix" groups="core,guixproject" />
+  <project path="bootstrappable" name="guix/bootstrappable" groups="guixproject,web" />
+  <project path="data-service" name="guix/data-service" groups="guixproject" />
+  <project path="dhcp" name="guix/dhcp" groups="guixproject" />
+  <project path="emacs-guix" name="guix/emacs-guix" groups="guixproject" />
+  <project path="gnunet" name="guix/gnunet" groups="guixproject" />
+  <project path="guix-artwork" name="guix/guix-artwork" groups="guixproject,web" />
+  <project path="guix-cuirass" name="guix/guix-cuirass" groups="guixproject,web" />
+  <project path="maintenance" name="guix/maintenance" groups="guixproject,web" />
+  <project path="videos" name="guix/videos" groups="guixproject,web" />
 
   <project path="channels/daviwil" name="daviwil/channel-x" groups="channels" remote="github"/>
   <project path="channels/flatwhatson" name="flatwhatson/guix-channel" groups="channels" remote="github"/>
   <project path="channels/nonguix" name="nonguix/nonguix" groups="channels" remote="gitlab"/>
   <project path="channels/rde" name="rde" groups="channels" remote="sourcehut_abcdw"/>
+  <project path="channels/guixrus" name="guixrus" groups="channels" remote="sourcehut_whereiseveryone" />
+
 </manifest>
