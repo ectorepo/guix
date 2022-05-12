@@ -13,5 +13,5 @@
   <remote name="sourcehut_whereiseveryone"
           fetch="https://git.sr.ht/~whereiseveryone" />
   <remote name="guix_bioinformatics"
-          fetch="https://git.genenetwork.org/guix-bioinformatics" />
+          fetch="https://git.genenetwork.org" />
 </manifest>
