@@ -19,6 +19,5 @@
   <project path="channels/nonguix" name="nonguix/nonguix" groups="channels" remote="gitlab"/>
   <project path="channels/rde" name="rde" groups="channels" remote="sourcehut_abcdw"/>
   <project path="channels/guixrus" name="guixrus" groups="channels" remote="sourcehut_whereiseveryone" />
-  <project path="channels/guix-bioinformatics" name="guix-bioinformatics/guix-bioinformatics" groups="channels" remote="guix_bioinformatics" />
 
 </manifest>
