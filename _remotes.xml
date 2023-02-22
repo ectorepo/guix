@@ -4,8 +4,11 @@
   <remote name="gitlab" fetch="https://gitlab.com" />
   <remote name="bitbucket" fetch="https://bitbucket.org" />
   <remote name="savannah" fetch="https://git.savannah.gnu.org/git" />
+  <remote name="guix_bioinformatics" fetch="https://git.genenetwork.org" />
+
+  <!-- Guix Channels -->
   <remote name="srht_abcdw" fetch="https://git.sr.ht/~abcdw" />
   <remote name="srht_whereiseveryone" fetch="https://git.sr.ht/~whereiseveryone" />
-  <remote name="guix_bioinformatics" fetch="https://git.genenetwork.org" />
   <remote name="srht_akagi" fetch="https://git.sr.ht/~akagi" />
+  <remote name="srht_plattfot" fetch="https://git.sr.ht/~plattfot" />
 </manifest>
