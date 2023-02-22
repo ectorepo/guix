@@ -29,5 +29,6 @@
   - most packages contain examples of using patchelf
     - provided by nonguix's binary-build-system
 + [[https://framagit.org/tyreunom/guix-android][tyreunom/guix-android]] packages supporting Android ecosystem
+  - from Julien Lepiller, the auther of Guix Home Manager
 + [[https://git.sr.ht/~michal_atlas/dotfiles/tree/master/][~michal_atlas/dotfiles]]
   - [[https://git.sr.ht/~michal_atlas/dotfiles/tree/master/item/atlas/home/home.scm][guix home configuration]] reputed to work on foreign distro's
