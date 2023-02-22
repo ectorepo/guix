@@ -22,5 +22,6 @@
   <project path="channels/rrr" name="rrr" groups="channels" remote="srht_akagi" />
   <project path="channels/plt" name="rrr" groups="channels" remote="srht_plattfot" />
   <project path="channels/guix-crypto" name="attila-lendvai/guix-crypto" groups="channels" remote="github" revision="refs/heads/main" />
+  <project path="channels/guix-android" name="tyreunum/guix-android" groups="channels" remote="framagit" />
 
 </manifest>

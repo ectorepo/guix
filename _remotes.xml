@@ -7,6 +7,7 @@
   <remote name="guix_bioinformatics" fetch="https://git.genenetwork.org" />
 
   <!-- Guix Channels -->
+  <remote name="framagit" fetch="https://framagit.org" />
   <remote name="srht_abcdw" fetch="https://git.sr.ht/~abcdw" />
   <remote name="srht_whereiseveryone" fetch="https://git.sr.ht/~whereiseveryone" />
   <remote name="srht_akagi" fetch="https://git.sr.ht/~akagi" />

@@ -24,10 +24,10 @@
   - nix user
 + [[https://git.sr.ht/~krevedkokun/guix-channel][~krevedkokun/guix-channel]]
   - integrates [[https://git.sr.ht/~krevedkokun/dotfiles/tree/master/item/channel/home/services/pipewire.scm][pipewire]] with guix home
-+ [[https://github.com/attila-lendvai/guix-crypto][attila-lendvai/guix-crypto]]
-  - a channel for blockchain/crypto.
-  - reproducible builds for ethereum (go, .net, etc)
++ [[https://github.com/attila-lendvai/guix-crypto][attila-lendvai/guix-crypto]] a channel for blockchain/crypto.
++ reproducible builds for ethereum (go, .net, etc)
   - most packages contain examples of using patchelf
     - provided by nonguix's binary-build-system
++ [[https://framagit.org/tyreunom/guix-android][tyreunom/guix-android]] packages supporting Android ecosystem
 + [[https://git.sr.ht/~michal_atlas/dotfiles/tree/master/][~michal_atlas/dotfiles]]
   - [[https://git.sr.ht/~michal_atlas/dotfiles/tree/master/item/atlas/home/home.scm][guix home configuration]] reputed to work on foreign distro's
