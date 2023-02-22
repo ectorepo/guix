@@ -17,7 +17,8 @@
   <project path="channels/daviwil" name="daviwil/channel-x" groups="channels" remote="github"/>
   <project path="channels/flatwhatson" name="flatwhatson/guix-channel" groups="channels" remote="github"/>
   <project path="channels/nonguix" name="nonguix/nonguix" groups="channels" remote="gitlab"/>
-  <project path="channels/rde" name="rde" groups="channels" remote="sourcehut_abcdw"/>
-  <project path="channels/guixrus" name="guixrus" groups="channels" remote="sourcehut_whereiseveryone" />
+  <project path="channels/rde" name="rde" groups="channels" remote="srht_abcdw"/>
+  <project path="channels/guixrus" name="guixrus" groups="channels" remote="srht_whereiseveryone" />
+  <project path="channels/rrr" name="rrr" groups="channels" remote="srht_akagi" />
 
 </manifest>
