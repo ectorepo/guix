@@ -3,20 +3,24 @@
 #+email: noreply@te.xel.io
 
 
-**** TODO add sourcehut remote and:
-+ RDE project: https://sr.ht/abcdw/rde/
+* Other Guix Projects
 
-#+begin_src xml
-  <project path="guix-home/rde"
-           name="abcdw/rde"
-           remote="github"
-           groups="rde,guixhome" />
-#+end_src
-
-**** TODO add Guix/Home profiles
-+ Guix Home: https://git.sr.ht/~krevedkokun/guix-channel
-+ Guix Home: https://hg.sr.ht/~yoctocell/guixrc (mercurial)
-+ Guix Home: https://git.ht/~abcdw/nonrde/
-+ RDE: https://git.sr.ht/~abcdw/rde/
-
-**** TODO add a few examples of guix channels
++ [[https://sr.ht/~abcdw/rde/][~abcdw/rde]]
+  - author of guix home
+  - guix channel with home & home-services
++ [[https://git.sr.ht/~apteryx/guix-api-examples/][~apteryx/guix-api-examples]]
+  - scheme scripts/utils for working with package metadata
++ [[https://git.sr.ht/~plattfot/plt/tree][~plattfot/plt]]
+  - quite a few =guix home= services
++ [[https://git.sr.ht/~akagi/rrr/tree/master/item/rrr/packages][~akagi/rrr]]
+  - quite a few packages
++ [[https://hg.sr.ht/~yoctocell/guixrc/browse?rev=tip][~yoctocell/guixrc]]
+  - mercurial repo
+  - many home-services configured
+  - interesting breakout of config
+  - xmonad user
+  - nix user
++ [[https://git.sr.ht/~krevedkokun/guix-channel][~krevedkokun/guix-channel]]
+  - integrates [[https://git.sr.ht/~krevedkokun/dotfiles/tree/master/item/channel/home/services/pipewire.scm][pipewire]] with guix home
++ [[https://git.sr.ht/~michal_atlas/dotfiles/tree/master/][~michal_atlas/dotfiles]]
+  - [[https://git.sr.ht/~michal_atlas/dotfiles/tree/master/item/atlas/home/home.scm][guix home configuration]] reputed to work on foreign distro's
