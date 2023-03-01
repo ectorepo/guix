@@ -20,8 +20,8 @@
   <project path="channels/rde" name="rde" groups="channels" remote="srht_abcdw"/>
   <project path="channels/guixrus" name="guixrus" groups="channels" remote="srht_whereiseveryone" />
   <project path="channels/rrr" name="rrr" groups="channels" remote="srht_akagi" />
-  <project path="channels/plt" name="rrr" groups="channels" remote="srht_plattfot" />
+  <project path="channels/plt" name="plt" groups="channels" remote="srht_plattfot" />
   <project path="channels/guix-crypto" name="attila-lendvai/guix-crypto" groups="channels" remote="github" revision="refs/heads/main" />
-  <project path="channels/guix-android" name="tyreunum/guix-android" groups="channels" remote="framagit" />
+  <project path="channels/guix-android" name="tyreunom/guix-android" groups="channels" remote="framagit" />
 
 </manifest>
