@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="github" fetch="https://github.com" />
-  <remote name="gitlab" fetch="https://gitlab.com" />
-  <remote name="bitbucket" fetch="https://bitbucket.org" />
-  <remote name="savannah" fetch="https://git.savannah.gnu.org/git" />
-  <remote name="guix_bioinformatics" fetch="https://git.genenetwork.org" />
-
-  <!-- Guix Channels -->
-  <remote name="framagit" fetch="https://framagit.org" />
-  <remote name="srht_abcdw" fetch="https://git.sr.ht/~abcdw" />
-  <remote name="srht_whereiseveryone" fetch="https://git.sr.ht/~whereiseveryone" />
-  <remote name="srht_akagi" fetch="https://git.sr.ht/~akagi" />
-  <remote name="srht_plattfot" fetch="https://git.sr.ht/~plattfot" />
+  <remote name="bitbucket" fetch="https://bitbucket.org"/>
+  <remote name="framagit" fetch="https://framagit.org"/>
+  <remote name="github" fetch="https://github.com"/>
+  <remote name="gitlab" fetch="https://gitlab.com"/>
+  <remote name="guix_bioinformatics" fetch="https://git.genenetwork.org"/>
+  <remote name="savannah" fetch="https://git.savannah.gnu.org/git"/>
+  <remote name="srht_abcdw" fetch="https://git.sr.ht/~abcdw"/>
+  <remote name="srht_akagi" fetch="https://git.sr.ht/~akagi"/>
+  <remote name="srht_plattfot" fetch="https://git.sr.ht/~plattfot"/>
+  <remote name="srht_whereiseveryone" fetch="https://git.sr.ht/~whereiseveryone"/>
 </manifest>
