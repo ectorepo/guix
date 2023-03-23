@@ -17,6 +17,8 @@
   <project path="channels/nonguix" name="nonguix/nonguix" groups="channels" remote="gitlab"/>
   <project path="channels/rde" name="rde" groups="channels" remote="srht_abcdw"/>
   <project path="channels/guixrus" name="guixrus" groups="channels" remote="srht_whereiseveryone"/>
+  <project path="channels/juix" name="Marie-Joseph/juix" groups="channels" remote="tree_st"/>
+  <project path="channels/guix-manage" name="Marie-Joseph/guix-manage" groups="channels" remote="tree_st"/>
   <project path="channels/rrr" name="rrr" groups="channels" remote="srht_akagi"/>
   <project path="channels/plt" name="plt" groups="channels" remote="srht_plattfot"/>
   <project path="channels/jrn" name="jitwit/guix-recipes" groups="channels" remote="github"/>
