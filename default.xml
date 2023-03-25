@@ -21,7 +21,7 @@
   <project path="channels/guix-manage" name="Marie-Joseph/guix-manage" groups="channels" remote="trees_st" revision="refs/heads/main"/>
   <project path="channels/rrr" name="rrr" groups="channels" remote="srht_akagi"/>
   <project path="channels/plt" name="plt" groups="channels" remote="srht_plattfot"/>
-  <project path="channels/jrn" name="jitwit/guix-recipes" groups="channels" remote="github"/>
+  <project path="channels/jrn" name="jitwit/guix-recipes" groups="channels" remote="github" revision="refs/heads/a"/>
   <project path="channels/guix-crypto" name="attila-lendvai/guix-crypto" groups="channels" remote="github" revision="refs/heads/main"/>
   <project path="channels/guix-android" name="tyreunom/guix-android" groups="channels" remote="framagit"/>
 </manifest>
