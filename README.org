@@ -5,7 +5,110 @@
 * Resources
 + [[https://doi.org/10.22152/programming-journal.org/2023/7/1][Building a secure software supply chain with GNU Guix]]
 
-* Other Guix Projects
+* Workflow
+
+When using =buffer-env= to run commands to build guix, =M-!= and =M-&= should be
+run from a buffer at the root of the guix checkout.
+
+Explanation of paths.
+
+|------------------+-----------------------------------------------------------|
+| Path             | Description                                               |
+|------------------+-----------------------------------------------------------|
+| $_ECTO           | The directory containing =repo sync= checkouts            |
+| $_ECTO/guix      | The repo with guix projects (including channels)          |
+| $_ECTO/guix/guix | The checkout of the savannah guix repository              |
+| $_REPO           | Repo superproject. Each submodule contains a default.xml  |
+| $_REPO/guix      | The git repository defining default.xml for guix projects |
+|------------------+-----------------------------------------------------------|
+
+** Setup with Symlinks
+
+If =buffer-env= is active, then this symlinking this =manifest.scm=, along with
+=.dir-locals-2.el= into the sync'd repo should allow you to seemlessly run
+commands to build guix in Emacs.  For me, I symlink this into =$_ECTO/guix/guix=.
+
+There may be a better way to do this in, perhaps in guix.el. I'm using symlinks
+to minimize issues with updating guix with =repo sync=, though if a file doesn't
+conflict, then repo shoudn't manage it.
+
+*manifest.scm*
+
+#+begin_src scheme :tangle guix.manifest.scm :eval no
+(use-modules (gnu packages)
+             (gnu packages package-management))
+
+(concatenate-manifests
+ (list (package->development-manifest guix)))
+#+end_src
+
+*** .dir-locals-2.el
+
++ The environment needs to be =--pure=. This is the only flag added to
+  =bufffer-env-commands= below.
++ Running =M-x buffer-env-update= needs to be done from a buffer in
+  =$_ECTO/guix/guix=
++ In order to get =.dir-locals-2.el= to stick, you may need to close all buffers
+  in the subdirectory =$_ECTO/guix/guix/=
++ Since Guix already has a =.dir-locals.el=, I'm using the emacs feature
+  =.dir-locals-2.el= which is core. Other options include =sidecar-locals= and
+  =cascading-dir-locals=, but these are specific to the emacs environment and
+  the file-system paths.
+
+#+begin_src emacs-lisp :tangle guix.dir-locals-2.el :eval no
+((nil .
+      ((buffer-env-commands
+        . ((".env" . "set -a && >&2 . \"$0\" && env -0")
+           ("manifest.scm" . "guix shell -m \"$0\" --pure -- env -0")
+           ("guix.scm" . "guix shell -D -f \"$0\" -- env -0")
+           ("*" . ">&2 . \"$0\" && env -0"))))))
+#+end_src
+
+*** Symlinks
+
+#+begin_src shell
+_repo_guix=$_REPO/guix
+_checkout_guix=$_ECTO/guix/guix
+if [ -e $_checkout_guix/manifest.scm ]; then
+    rm $_checkout_guix/manifest.scm
+fi
+if [ -e $_checkout_guix/.dir-locals-2.el ]; then
+    rm $_checkout_guix/.dir-locals-2.el
+fi
+ln -s $_repo_guix/guix.manifest.scm $_checkout_guix/manifest.scm
+ln -s $_repo_guix/guix.dir-locals-2.el $_checkout_guix/.dir-locals-2.el
+#+end_src
+
+** With Guix Profiles
+
+Benefits:
+
++ This profile for building Guix from source can be definied or managed
+  separately.
++ This would reduce Network, Disk & IO load. By default, =buffer-env= will
+  attempt to update the manifest each time.
+
+Requirements:
+
++ This would still need the =--pure= flag passed to =guix shell=.
++ This still requires symlinking =.dir-locals-2.el= but doesn't require a local
+  =manifest.scm= in the project.
++ A key should be added to =.dir-locals-2.el=, so =buffer-env= will run =guix
+  shell= will reference an existing Guix profile.
+
+** With direnv
+
+Benefits: it's easier to support =guix time-machine=, as well as
+=channels(:?-lock)?.scm=. See [[https://sr.ht/~abcdw/guix-clojure][~abcdw/guix-clojure]] for an example.
+
+
+* Notes
+** The Guix =build-essential=
+
+=guix shell -FC coreutils findutils grep sed diffutils patch gawk tar gzip bzip2
+xz lzip fuse-exfat glibc zlib=
+
+** Other Guix Projects
 
 + [[https://sr.ht/~abcdw/rde/][~abcdw/rde]]
   - author of guix home
