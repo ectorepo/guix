@@ -18,19 +18,9 @@ Explanation of paths.
 | $_ECTO           | The directory containing =repo sync= checkouts            |
 | $_ECTO/guix      | The repo with guix projects (including channels)          |
 | $_ECTO/guix/guix | The checkout of the savannah guix repository              |
-| $_REPO           | Repo superproject. Each submodule contains a default.xml  |
+| $_REPO           | Git superproject. Each submodule contains a default.xml   |
 | $_REPO/guix      | The git repository defining default.xml for guix projects |
 |------------------+-----------------------------------------------------------|
-
-** Setup with Symlinks
-
-If =buffer-env= is active, then this symlinking this =manifest.scm=, along with
-=.dir-locals-2.el= into the sync'd repo should allow you to seemlessly run
-commands to build guix in Emacs.  For me, I symlink this into =$_ECTO/guix/guix=.
-
-There may be a better way to do this in, perhaps in guix.el. I'm using symlinks
-to minimize issues with updating guix with =repo sync=, though if a file doesn't
-conflict, then repo shoudn't manage it.
 
 *manifest.scm*
 
@@ -41,6 +31,34 @@ conflict, then repo shoudn't manage it.
 (concatenate-manifests
  (list (package->development-manifest guix)))
 #+end_src
+
+** Using A Guix Profile
+
+This method avoids relying on =buffer-env= and =.dir-locals-2.el=.
+
++ Tangle the above manifest and copy it to wherever you store profiles.
++ Prepend each command with =guix shell -p $profile=
++ Run commands manually.
+
+*** Services
+
+The repo sync action could be wrapped in a shepherd or systemd service. This
+could be a series of one-shot services, perhaps triggered by a file-watcher.
+
+
+** With Buffer Env and Guix Manifest
+
+This was too confusing and caused too much uncertainty with =buffer-env=,
+perhaps owing to the reliance on =.dir-locals-2.el=, so I'm using the method
+above.
+
+If =buffer-env= is active, then this symlinking this =manifest.scm=, along with
+=.dir-locals-2.el= into the sync'd repo should allow you to seemlessly run
+commands to build guix in Emacs.  For me, I symlink this into =$_ECTO/guix/guix=.
+
+There may be a better way to do this in, perhaps in guix.el. I'm using symlinks
+to minimize issues with updating guix with =repo sync=, though if a file doesn't
+conflict, then repo shoudn't manage it.
 
 *** .dir-locals-2.el
 
