@@ -2,6 +2,8 @@
 #+author:   David Conner
 #+email: noreply@te.xel.io
 
++ guix/diagnostics.scm :: basis for tagging locations in scheme source maps
+
 * Resources
 + [[https://doi.org/10.22152/programming-journal.org/2023/7/1][Building a secure software supply chain with GNU Guix]]
 
