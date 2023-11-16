@@ -24,4 +24,5 @@
   <project path="channels/jrn" name="jitwit/guix-recipes" groups="channels" remote="github" revision="refs/heads/a"/>
   <project path="channels/guix-crypto" name="attila-lendvai/guix-crypto" groups="channels" remote="github" revision="refs/heads/main"/>
   <project path="channels/guix-android" name="tyreunom/guix-android" groups="channels" remote="framagit"/>
+  <project path="channels/baulig" name="martin-baulig/config-and-setup/guix-packages" groups="channels" remote="gitlab"/>
 </manifest>
