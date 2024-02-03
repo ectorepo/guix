@@ -9,7 +9,7 @@
   <project path="emacs-guix" name="guix/emacs-guix" groups="guixproject"/>
   <project path="gnunet" name="guix/gnunet" groups="guixproject"/>
   <project path="guix-artwork" name="guix/guix-artwork" groups="guixproject,web"/>
-  <project path="guix-cuirass" name="guix/guix-cuirass" groups="guixproject,web"/>
+  <project path="guix-cuirass" name="guix/guix-cuirass" groups="guixproject,web" revision="refs/heads/main"/>
   <project path="maintenance" name="guix/maintenance" groups="guixproject,web"/>
   <project path="videos" name="guix/videos" groups="guixproject,web"/>
   <project path="channels/daviwil" name="daviwil/channel-x" groups="channels" remote="github"/>
