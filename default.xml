@@ -25,6 +25,6 @@
   <project path="channels/guix-crypto" name="attila-lendvai/guix-crypto" groups="channels" remote="github" revision="refs/heads/main"/>
   <project path="channels/guix-android" name="tyreunom/guix-android" groups="channels" remote="framagit"/>
   <project path="channels/baulig" name="martin-baulig/config-and-setup/guix-packages" groups="channels" revision="refs/heads/main" remote="gitlab"/>
-  <project path="channels/guix-hpc" name="guix-hpc/guix-hpc" groups="channels" revision="refs/heads/main" remote="inria"/>
-  <project path="channels/guix-hpc-non-free" name="guix-hpc/guix-hpc-non-free" groups="channels" revision="refs/heads/main" remote="inria"/>
+  <project path="channels/guix-hpc" name="guix-hpc/guix-hpc" groups="channels" revision="refs/heads/master" remote="inria"/>
+  <project path="channels/guix-hpc-non-free" name="guix-hpc/guix-hpc-non-free" groups="channels" revision="refs/heads/master" remote="inria"/>
 </manifest>
