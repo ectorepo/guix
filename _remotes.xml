@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest>
   <remote name="bitbucket" fetch="https://bitbucket.org"/>
-  <remote name="blender" fetch="https://git.blender.org"/>
+  <remote name="blender" fetch="https://projects.blender.org/blender"/>
   <remote name="codeberg" fetch="https://codeberg.org"/>
   <remote name="dthompson" fetch="https://git.dthompson.us"/>
   <remote name="framagit" fetch="https://framagit.org"/>
@@ -16,6 +16,8 @@
   <remote name="invent" fetch="https://invent.kde.org"/>
   <remote name="kernel" fetch="https://git.kernel.org/pub/scm"/>
   <remote name="opencascade" fetch="https://git.dev.opencascade.org/repos"/>
+  <remote name="pantherx" fetch="https://git.pantherx.org"/>
+  <remote name="pantherxchannel" fetch="https://channels.pantherx.org/git"/>
   <remote name="phundrak" fetch="https://labs.phundrak.com"/>
   <remote name="savannah" fetch="https://git.savannah.gnu.org/git"/>
   <remote name="sourceware" fetch="https://sourceware.org/git"/>
