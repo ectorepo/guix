@@ -1,6 +1,7 @@
 #+title:    Ectorepo: Guix
 #+author:   David Conner
 #+email: noreply@te.xel.io
+#+PROPERTY: header-args :comments none
 
 + guix/diagnostics.scm :: basis for tagging locations in scheme source maps
 
@@ -17,7 +18,7 @@ Explanation of paths.
 |------------------+-----------------------------------------------------------|
 | Path             | Description                                               |
 |------------------+-----------------------------------------------------------|
-| $_ECTO           | The directory containing =repo sync= checkouts            |
+| $_ECTO           | The directory containing =repo sync= checkouts              |
 | $_ECTO/guix      | The repo with guix projects (including channels)          |
 | $_ECTO/guix/guix | The checkout of the savannah guix repository              |
 | $_REPO           | Git superproject. Each submodule contains a default.xml   |
