@@ -12,7 +12,7 @@
 
 From [[https://toys.whereis.xn--q9jyb4c/][toys.whereis.みんな]]
 
-#+name: jqprog
+#+name: jqGuixChannels
 #+begin_example jq
 # def parseURL:
 #     capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?");
@@ -28,7 +28,8 @@ sort_by(.url)
 
 # +begin_src restclient :jq "map([.owner.login, .name, .size])[] | @csv"
 # :results table :jq-args "--raw-output"
-#+begin_src restclient :results table :jq (org-sbe jqprog) :jq-args --raw-output
+#+name: guixChannels
+#+begin_src restclient :results table :exports both :jq (org-sbe jqGuixChannels) :jq-args --raw-output
 :minna-api = https://toys.whereis.social/api
 :minna-route = channels
 :minna-params = limit=100
@@ -41,7 +42,7 @@ GET :minna-api/:minna-route?:minna-params
 :headers
 #+end_src
 
-#+RESULTS:
+#+RESULTS: guixChannels
 |    27 |   0 | ngapsh               | main    | Parnikkapore/guix-ngapsh-unsigned          | https://codeberg.org         |
 |    19 |   0 | divya-lambda         | master  | divyaranjan/divya-lambda                   | https://codeberg.org         |
 |    37 |   1 | mobilizon-reshare    | main    | fishinthecalculator/mobilizon-reshare-guix | https://codeberg.org         |
