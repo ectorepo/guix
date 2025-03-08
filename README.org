@@ -8,6 +8,116 @@
 * Resources
 + [[https://doi.org/10.22152/programming-journal.org/2023/7/1][Building a secure software supply chain with GNU Guix]]
 
+* Channels
+
+From [[https://toys.whereis.xn--q9jyb4c/][toys.whereis.みんな]]
+
+#+name: jqprog
+#+begin_example jq
+# def parseURL:
+#     capture("^((?<scheme>[^:/?#]+):)?(//(?<authority>(?<domain>[^/?#:]*)(:(?<port>[0-9]*))?))?((?<path>[^?#]*))?(\\?(?<query>([^#]*)))?(#(?<fragment>(.*)))?");
+
+# .commit,
+sort_by(.url)
+  | map([
+    .packagesCount, .servicesCount, .name, .branch,
+    (.url | split("/") | .[3:] | map(select(length > 0)) | join("/")),
+    (.url | split("/") | .[:3] | join("/"))
+    ])[] | @csv
+#+end_example
+
+# +begin_src restclient :jq "map([.owner.login, .name, .size])[] | @csv"
+# :results table :jq-args "--raw-output"
+#+begin_src restclient :results table :jq (org-sbe jqprog) :jq-args --raw-output
+:minna-api = https://toys.whereis.social/api
+:minna-route = channels
+:minna-params = limit=100
+
+:headers = <<
+Accept: application/json
+User-Agent: Emacs
+
+GET :minna-api/:minna-route?:minna-params
+:headers
+#+end_src
+
+#+RESULTS:
+|    27 |   0 | ngapsh               | main    | Parnikkapore/guix-ngapsh-unsigned          | https://codeberg.org         |
+|    19 |   0 | divya-lambda         | master  | divyaranjan/divya-lambda                   | https://codeberg.org         |
+|    37 |   1 | mobilizon-reshare    | main    | fishinthecalculator/mobilizon-reshare-guix | https://codeberg.org         |
+|   154 |  11 | small-guix           | main    | fishinthecalculator/small-guix             | https://codeberg.org         |
+|   855 |   1 | guix-science         | master  | guix-science/guix-science                  | https://codeberg.org         |
+|   143 |   0 | guix-science-nonfree | master  | guix-science/guix-science-nonfree          | https://codeberg.org         |
+|    23 |   1 | atomized             | main    | ieure/atomized-guix                        | https://codeberg.org         |
+|    21 |   0 | kakafarm             | master  | kakafarm/guix-kakafarm-channel             | https://codeberg.org         |
+|    80 |   0 | lguix-channel        | main    | lgatto/lguix-channel                       | https://codeberg.org         |
+|    64 |   8 | saayix               | main    | look/saayix                                | https://codeberg.org         |
+|     1 |   0 | ollama-guix          | master  | tusharhero/ollama-guix                     | https://codeberg.org         |
+|     4 |   0 | thgsc                | master  | tusharhero/thgsc                           | https://codeberg.org         |
+|    12 |   0 | bloup                | master  | nll/bloup                                  | https://framagit.org         |
+|   178 |   0 | guix-android         | master  | tyreunom/guix-android                      | https://framagit.org         |
+|    38 |   1 | sakura               | main    | freya/sakura                               | https://g.freya.cat          |
+|   788 |   5 | gn-bioinformatics    | master  | guix-bioinformatics                        | https://git.genenetwork.org  |
+|    24 |   1 | little-guix-channel  | master  | little-guix-channel                        | https://git.goritskov.com    |
+|    17 |   0 | noisytoot            | master  | noisytoot/guix-channel                     | https://git.noisytoot.org    |
+|     0 |   0 | guix-north-america   | master  | rekahsoft/guix-north-america               | https://git.rekahsoft.ca     |
+| 34121 | 294 | guix                 | master  | git/guix.git                               | https://git.savannah.gnu.org |
+|   202 |  47 | rde                  | master  | ~abcdw/rde                                 | https://git.sr.ht            |
+|   347 |   0 | rrr                  | master  | ~akagi/rrr                                 | https://git.sr.ht            |
+|     5 |   0 | vf2                  | master  | ~akagi/vf2-guix                            | https://git.sr.ht            |
+|    78 |   1 | nebula               | master  | ~apoorv569/nebula                          | https://git.sr.ht            |
+|    14 |   2 | benoitj              | main    | ~benoit/my-guix-channel                    | https://git.sr.ht            |
+|    37 |   0 | electronics          | main    | ~csantosb/guix.channel-electronics         | https://git.sr.ht            |
+|   441 |   1 | efraim-dfsg          | master  | ~efraim/my-guix                            | https://git.sr.ht            |
+|     3 |   1 | fnat                 | main    | ~fabionatali/guix-fnat                     | https://git.sr.ht            |
+|   122 |   0 | ffab                 | main    | ~hellseher/ffab                            | https://git.sr.ht            |
+|   152 |   0 | hitwright            | main    | ~hitwright/personal-guix-channel           | https://git.sr.ht            |
+|   103 |   0 | kbg                  | master  | ~kennyballou/guix-channel                  | https://git.sr.ht            |
+|    24 |   3 | waggle               | trunk   | ~lunabee/waggle                            | https://git.sr.ht            |
+|     1 |   0 | mediagoblin          | master  | ~mediagoblin/mediagoblin                   | https://git.sr.ht            |
+|    32 |   9 | atlas                | master  | ~michal_atlas/guix-channel                 | https://git.sr.ht            |
+|     6 |   1 | neguix               | main    | ~niklaseklund/neguix                       | https://git.sr.ht            |
+|     6 |   0 | old                  | master  | ~old/guix-channel                          | https://git.sr.ht            |
+|    36 |  45 | plt                  | master  | ~plattfot/plt                              | https://git.sr.ht            |
+|    39 |   3 | glue                 | default | ~puercopop/glue                            | https://git.sr.ht            |
+|     2 |   0 | rg                   | master  | ~raghavgururajan/guix-channel              | https://git.sr.ht            |
+|    93 |  25 | sijo                 | main    | ~simendsjo/dotfiles                        | https://git.sr.ht            |
+|     3 |   0 | sokolov              | master  | ~sokolov/channel                           | https://git.sr.ht            |
+|    15 |   0 | trevdev              | main    | ~trevdev/guix-channel                      | https://git.sr.ht            |
+|    20 |   4 | unwox                | master  | ~unwox/guix-pkgs                           | https://git.sr.ht            |
+|   651 |   9 | guixrus              | master  | ~whereiseveryone/guixrus                   | https://git.sr.ht            |
+|    55 |   0 | invoke-restart       | master  | ~whereiseveryone/invoke-restart            | https://git.sr.ht            |
+|   254 |   0 | yewscion             | trunk   | ~yewscion/yewscion-guix-channel            | https://git.sr.ht            |
+|     7 |   9 | guix-forge           | main    | guix-forge                                 | https://git.systemreboot.net |
+|     4 |   2 | juix                 | main    | Marie-Joseph/juix                          | https://git.trees.st         |
+|    56 |   7 | tassos-guix          | master  | Tass0sm/tassos-guix                        | https://github.com           |
+|    17 |   0 | bric-a-brac          | master  | altomcat/bric-a-brac                       | https://github.com           |
+|     9 |   3 | crypto               | main    | attila-lendvai/guix-crypto                 | https://github.com           |
+|     0 |   0 | emacs                | master  | babariviere/guix-emacs                     | https://github.com           |
+|   162 |   0 | rustup               | master  | declantsien/guix-rustup                    | https://github.com           |
+|    29 |   0 | sheepfold            | master  | dochang/sheepfold                          | https://github.com           |
+|     3 |   0 | druix                | main    | drewc/druix                                | https://github.com           |
+|    16 |   1 | engstrand            | main    | engstrand-config/guix-dotfiles             | https://github.com           |
+|     0 |  14 | gocix                | main    | fishinthecalculator/gocix                  | https://github.com           |
+|     2 |   3 | sops-guix            | main    | fishinthecalculator/sops-guix              | https://github.com           |
+|     6 |   0 | flat                 | master  | flatwhatson/guix-channel                   | https://github.com           |
+|     9 |   0 | emacs-master         | main    | gs-101/emacs-master                        | https://github.com           |
+|    71 |   0 | selected-guix-works  | main    | gs-101/selected-guix-works                 | https://github.com           |
+|     3 |   0 | guixcn               | master  | guixcn/guix-channel                        | https://github.com           |
+|    23 |   0 | bin-guix             | main    | ieugen/bin-guix                            | https://github.com           |
+|     3 |   1 | teamspeak            | master  | jeandudey/guix-teamspeak                   | https://github.com           |
+|   105 |   2 | hui                  | master  | newluhux/guix-hui                          | https://github.com           |
+|    33 |  21 | rosenthal            | trunk   | rakino/rosenthal                           | https://github.com           |
+|     7 |   0 | rust-next            | master  | umanwizard/guix-rust-next                  | https://github.com           |
+|     2 |   1 | tailscale            | main    | umanwizard/guix-tailscale                  | https://github.com           |
+|   183 |   2 | nonguix              | master  | nonguix/nonguix                            | https://gitlab.com           |
+|     2 |   0 | spritely             | main    | spritely/spritely-guix                     | https://gitlab.com           |
+|     1 |   0 | tuziwo               | main    | woshilapin/tuziwo-channel                  | https://gitlab.com           |
+|   324 |   0 | guix-hpc             | master  | guix-hpc/guix-hpc                          | https://gitlab.inria.fr      |
+|   114 |   1 | guix-hpc-non-free    | master  | guix-hpc/guix-hpc-non-free                 | https://gitlab.inria.fr      |
+|   141 |   0 | guix-past            | master  | guix-hpc/guix-past                         | https://gitlab.inria.fr      |
+|   157 |   0 | wigust               | master  | wigust/guix-wigust                         | https://notabug.org          |
+
 * Workflow
 
 When using =buffer-env= to run commands to build guix, =M-!= and =M-&= should be
