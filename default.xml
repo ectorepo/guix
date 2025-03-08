@@ -24,6 +24,10 @@
   <project path="channels/plt" name="plt" groups="channels" remote="srht_plattfot"/>
   <project path="channels/jrn" name="jitwit/guix-recipes" groups="channels" remote="github" revision="refs/heads/a"/>
   <project path="channels/guix-crypto" name="attila-lendvai/guix-crypto" groups="channels" remote="github" revision="refs/heads/main"/>
+  <project path="channels/sops-guix" name="fishinthecalculator/sops-guix" groups="channels" remote="github" revision="refs/heads/main"/>
+  <project path="channels/gocix" name="fishinthecalculator/gocix" groups="channels" remote="github" revision="refs/heads/main"/>
+  <project path="channels/small-guix" name="fishinthecalculator/small-guix" groups="channels" remote="codeberg" revision="refs/heads/main"/>
+  <project path="channels/guix-deployments" name="fishinthecalculator/guix-deployments" groups="channels" remote="codeberg" revision="refs/heads/main"/>
   <project path="channels/guix-android" name="tyreunom/guix-android" groups="channels" remote="framagit"/>
   <project path="channels/baulig" name="martin-baulig/config-and-setup/guix-packages" groups="channels" revision="refs/heads/main" remote="gitlab"/>
   <project path="channels/pantherx" name="development/panther" groups="channels" revision="refs/heads/master" remote="pantherx"/>

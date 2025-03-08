@@ -8,7 +8,7 @@
 * Resources
 + [[https://doi.org/10.22152/programming-journal.org/2023/7/1][Building a secure software supply chain with GNU Guix]]
 
-* Channels
+* Toys API
 
 From [[https://toys.whereis.xn--q9jyb4c/][toys.whereis.みんな]]
 
@@ -119,6 +119,32 @@ GET :minna-api/:minna-route?:minna-params
 |   141 |   0 | guix-past            | master  | guix-hpc/guix-past                         | https://gitlab.inria.fr      |
 |   157 |   0 | wigust               | master  | wigust/guix-wigust                         | https://notabug.org          |
 
+* Channels
+
+** fishinthecalculator
+
+*** sops-guix
+
+Tooling to interact with SOPS, based on sops-nix
+
+*** gocix
+
+Some packages/services pushed upstream (to non/guix)
+
+*** small-guix
+
+Some packages/services pushed upstream (to non/guix)
+
+**** k8s
+
+Contains some additional k8s tooling not in nonguix
+
+**** Solo2
+
++ [[https://github.com/solokeys/solo2-cli][solokeys/solo2-cli]] and deps, which link a bunch of interesting projects to
+  support Solo 2 Security Keys
++ [[https://github.com/lpc55/lpc55-host][lpc55/lpc55-host]] (crate docs link to [[https://github.com/nxp-mcuxpresso/spsdk?tab=readme-ov-file][nxp-mcuxpresso/spsdk]], which contains
+  hardware descriptions for a myriad of ESP32 chips)
 * Workflow
 
 When using =buffer-env= to run commands to build guix, =M-!= and =M-&= should be
