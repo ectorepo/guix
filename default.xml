@@ -2,35 +2,38 @@
 <manifest>
   <include name="_remotes.xml"/>
   <default remote="savannah" sync-j="8" revision="refs/heads/master"/>
-  <project path="guix" name="guix" groups="core,guixproject"/>
   <project path="bootstrappable" name="guix/bootstrappable" groups="guixproject,web"/>
-  <project path="data-service" name="guix/data-service" groups="guixproject"/>
+  <project path="build-coordinator" name="guix/build-coordinator" groups="guixproject,ci" revision="refs/heads/trunk"/>
+  <project path="channels/baulig" name="martin-baulig/config-and-setup/guix-packages" groups="channels" revision="refs/heads/main" remote="gitlab"/>
+  <project path="channels/daviwil" name="daviwil/channel-x" groups="channels" remote="github"/>
+  <project path="channels/farg" name="engstrand-config/farg" groups="channels" remote="github" revision="refs/heads/main"/>
+  <project path="channels/flatwhatson" name="flatwhatson/guix-channel" groups="channels" remote="github"/>
+  <project path="channels/gocix" name="fishinthecalculator/gocix" groups="channels" remote="github" revision="refs/heads/main"/>
+  <project path="channels/guix-android" name="tyreunom/guix-android" groups="channels" remote="framagit"/>
+  <project path="channels/guix-crypto" name="attila-lendvai/guix-crypto" groups="channels" remote="github" revision="refs/heads/main"/>
+  <project path="channels/guix-deployments" name="fishinthecalculator/guix-deployments" groups="channels" remote="codeberg" revision="refs/heads/main"/>
+  <project path="channels/guix-hpc" name="guix-hpc/guix-hpc" groups="channels" revision="refs/heads/master" remote="inria"/>
+  <project path="channels/guix-hpc-non-free" name="guix-hpc/guix-hpc-non-free" groups="channels" revision="refs/heads/master" remote="inria"/>
+  <project path="channels/guix-manage" name="Marie-Joseph/guix-manage" groups="channels" remote="trees_st" revision="refs/heads/main"/>
+  <project path="channels/guixrus" name="guixrus" groups="channels" remote="srht_whereiseveryone"/>
+  <project path="channels/jrn" name="jitwit/guix-recipes" groups="channels" remote="github" revision="refs/heads/a"/>
+  <project path="channels/juix" name="Marie-Joseph/juix" groups="channels" remote="trees_st" revision="refs/heads/main"/>
+  <project path="channels/nonguix" name="nonguix/nonguix" groups="channels" remote="gitlab"/>
+  <project path="channels/pantherx" name="development/panther" groups="channels" revision="refs/heads/master" remote="pantherx"/>
+  <project path="channels/plt" name="plt" groups="channels" remote="srht_plattfot"/>
+  <project path="channels/rde" name="rde" groups="channels" remote="srht_abcdw"/>
+  <project path="channels/rrr" name="rrr" groups="channels" remote="srht_akagi"/>
+  <project path="channels/small-guix" name="fishinthecalculator/small-guix" groups="channels" remote="codeberg" revision="refs/heads/main"/>
+  <project path="channels/sops-guix" name="fishinthecalculator/sops-guix" groups="channels" remote="github" revision="refs/heads/main"/>
+  <project path="data-service" name="guix/data-service" groups="guixproject,ci" revision="refs/heads/trunk"/>
   <project path="dhcp" name="guix/dhcp" groups="guixproject"/>
   <project path="emacs-guix" name="guix/emacs-guix" groups="guixproject"/>
   <project path="gnunet" name="guix/gnunet" groups="guixproject"/>
+  <project path="guix" name="guix" groups="core,guixproject"/>
   <project path="guix-artwork" name="guix/guix-artwork" groups="guixproject,web"/>
-  <project path="guix-cuirass" name="guix/guix-cuirass" groups="guixproject,web" revision="refs/heads/main"/>
-  <project path="maintenance" name="guix/maintenance" groups="guixproject,web"/>
+  <project path="guix-consensus-documents" name="guix/guix-consensus-documents" groups="guixproject,community" revision="refs/heads/main"/>
+  <project path="guix-cuirass" name="guix/guix-cuirass" groups="guixproject,ci" revision="refs/heads/main"/>
+  <project path="maintenance" name="guix/maintenance" groups="guixproject,ci"/>
+  <project path="mumi" name="guix/mumi" groups="guixproject" remote="savannah" revision="refs/heads/master"/>
   <project path="videos" name="guix/videos" groups="guixproject,web"/>
-  <project path="channels/daviwil" name="daviwil/channel-x" groups="channels" remote="github"/>
-  <project path="channels/flatwhatson" name="flatwhatson/guix-channel" groups="channels" remote="github"/>
-  <project path="channels/nonguix" name="nonguix/nonguix" groups="channels" remote="gitlab"/>
-  <project path="channels/rde" name="rde" groups="channels" remote="srht_abcdw"/>
-  <project path="channels/guixrus" name="guixrus" groups="channels" remote="srht_whereiseveryone"/>
-  <project path="channels/farg" name="engstrand-config/farg" groups="channels" remote="github" revision="refs/heads/main"/>
-  <project path="channels/juix" name="Marie-Joseph/juix" groups="channels" remote="trees_st" revision="refs/heads/main"/>
-  <project path="channels/guix-manage" name="Marie-Joseph/guix-manage" groups="channels" remote="trees_st" revision="refs/heads/main"/>
-  <project path="channels/rrr" name="rrr" groups="channels" remote="srht_akagi"/>
-  <project path="channels/plt" name="plt" groups="channels" remote="srht_plattfot"/>
-  <project path="channels/jrn" name="jitwit/guix-recipes" groups="channels" remote="github" revision="refs/heads/a"/>
-  <project path="channels/guix-crypto" name="attila-lendvai/guix-crypto" groups="channels" remote="github" revision="refs/heads/main"/>
-  <project path="channels/sops-guix" name="fishinthecalculator/sops-guix" groups="channels" remote="github" revision="refs/heads/main"/>
-  <project path="channels/gocix" name="fishinthecalculator/gocix" groups="channels" remote="github" revision="refs/heads/main"/>
-  <project path="channels/small-guix" name="fishinthecalculator/small-guix" groups="channels" remote="codeberg" revision="refs/heads/main"/>
-  <project path="channels/guix-deployments" name="fishinthecalculator/guix-deployments" groups="channels" remote="codeberg" revision="refs/heads/main"/>
-  <project path="channels/guix-android" name="tyreunom/guix-android" groups="channels" remote="framagit"/>
-  <project path="channels/baulig" name="martin-baulig/config-and-setup/guix-packages" groups="channels" revision="refs/heads/main" remote="gitlab"/>
-  <project path="channels/pantherx" name="development/panther" groups="channels" revision="refs/heads/master" remote="pantherx"/>
-  <project path="channels/guix-hpc" name="guix-hpc/guix-hpc" groups="channels" revision="refs/heads/master" remote="inria"/>
-  <project path="channels/guix-hpc-non-free" name="guix-hpc/guix-hpc-non-free" groups="channels" revision="refs/heads/master" remote="inria"/>
 </manifest>
