@@ -18,11 +18,13 @@
   <project path="channels/guixrus" name="guixrus" groups="channels" remote="srht_whereiseveryone"/>
   <project path="channels/jrn" name="jitwit/guix-recipes" groups="channels" remote="github" revision="refs/heads/a"/>
   <project path="channels/juix" name="Marie-Joseph/juix" groups="channels" remote="trees_st" revision="refs/heads/main"/>
+  <project path="channels/misako" name="look/misako" groups="channels" remote="codeberg" revision="refs/heads/main"/>
   <project path="channels/nonguix" name="nonguix/nonguix" groups="channels" remote="gitlab"/>
   <project path="channels/pantherx" name="development/panther" groups="channels" revision="refs/heads/master" remote="pantherx"/>
   <project path="channels/plt" name="plt" groups="channels" remote="srht_plattfot"/>
   <project path="channels/rde" name="rde" groups="channels" remote="srht_abcdw"/>
   <project path="channels/rrr" name="rrr" groups="channels" remote="srht_akagi"/>
+  <project path="channels/sayyix" name="look/sayyix" groups="channels" remote="codeberg" revision="refs/heads/main"/>
   <project path="channels/small-guix" name="fishinthecalculator/small-guix" groups="channels" remote="codeberg" revision="refs/heads/main"/>
   <project path="channels/sops-guix" name="fishinthecalculator/sops-guix" groups="channels" remote="github" revision="refs/heads/main"/>
   <project path="data-service" name="guix/data-service" groups="guixproject,ci" revision="refs/heads/trunk"/>
