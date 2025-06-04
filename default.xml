@@ -22,6 +22,7 @@
   <project path="channels/nonguix" name="nonguix/nonguix" groups="channels" remote="gitlab"/>
   <project path="channels/pantherx" name="development/panther" groups="channels" revision="refs/heads/master" remote="pantherx"/>
   <project path="channels/plt" name="plt" groups="channels" remote="srht_plattfot"/>
+  <project path="channels/radix" name="anemofilia/radix" groups="channels" remote="codeberg" revision="refs/heads/main"/>
   <project path="channels/rde" name="rde" groups="channels" remote="srht_abcdw"/>
   <project path="channels/rrr" name="rrr" groups="channels" remote="srht_akagi"/>
   <project path="channels/saayix" name="look/saayix" groups="channels" remote="codeberg" revision="refs/heads/main"/>
