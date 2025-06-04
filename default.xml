@@ -24,7 +24,7 @@
   <project path="channels/plt" name="plt" groups="channels" remote="srht_plattfot"/>
   <project path="channels/rde" name="rde" groups="channels" remote="srht_abcdw"/>
   <project path="channels/rrr" name="rrr" groups="channels" remote="srht_akagi"/>
-  <project path="channels/sayyix" name="look/sayyix" groups="channels" remote="codeberg" revision="refs/heads/main"/>
+  <project path="channels/saayix" name="look/saayix" groups="channels" remote="codeberg" revision="refs/heads/main"/>
   <project path="channels/small-guix" name="fishinthecalculator/small-guix" groups="channels" remote="codeberg" revision="refs/heads/main"/>
   <project path="channels/sops-guix" name="fishinthecalculator/sops-guix" groups="channels" remote="github" revision="refs/heads/main"/>
   <project path="data-service" name="guix/data-service" groups="guixproject,ci" revision="refs/heads/trunk"/>
