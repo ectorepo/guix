@@ -6,6 +6,7 @@
   <project path="build-coordinator" name="guix/build-coordinator" groups="guixproject,ci" revision="refs/heads/trunk"/>
   <project path="channels/baulig" name="martin-baulig/config-and-setup/guix-packages" groups="channels" revision="refs/heads/main" remote="gitlab"/>
   <project path="channels/daviwil" name="daviwil/channel-x" groups="channels" remote="github"/>
+  <project path="channels/electronics" name="guix.channel-electronics" groups="channels" remote="srht_csantosb"/>
   <project path="channels/farg" name="engstrand-config/farg" groups="channels" remote="github" revision="refs/heads/main"/>
   <project path="channels/flatwhatson" name="flatwhatson/guix-channel" groups="channels" remote="github"/>
   <project path="channels/gocix" name="fishinthecalculator/gocix" groups="channels" remote="github" revision="refs/heads/main"/>
