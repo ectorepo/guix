@@ -13,6 +13,7 @@
   <project path="channels/guix-android" name="tyreunom/guix-android" groups="channels" remote="framagit"/>
   <project path="channels/guix-crypto" name="attila-lendvai/guix-crypto" groups="channels" remote="github" revision="refs/heads/main"/>
   <project path="channels/guix-deployments" name="fishinthecalculator/guix-deployments" groups="channels" remote="codeberg" revision="refs/heads/main"/>
+  <project path="channels/guix-llms" name="rekahsoft/guix-llms" groups="channels" revision="refs/heads/master" remote="rekahsoft"/>
   <project path="channels/guix-hpc" name="guix-hpc/guix-hpc" groups="channels" revision="refs/heads/master" remote="inria"/>
   <project path="channels/guix-hpc-non-free" name="guix-hpc/guix-hpc-non-free" groups="channels" revision="refs/heads/master" remote="inria"/>
   <project path="channels/guix-manage" name="Marie-Joseph/guix-manage" groups="channels" remote="trees_st" revision="refs/heads/main"/>
