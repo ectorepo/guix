@@ -35,7 +35,7 @@
   <project path="dhcp" name="guix/dhcp" groups="guixproject"/>
   <project path="emacs-guix" name="guix/emacs-guix" groups="guixproject"/>
   <project path="gnunet" name="guix/gnunet" groups="guixproject"/>
-  <project path="guix" name="guix" remote="codeberg" groups="core,guixproject"/>
+  <project path="guix" name="guix/guix" remote="codeberg" groups="core,guixproject"/>
   <project path="guix-artwork" name="guix/guix-artwork" groups="guixproject,web"/>
   <project path="guix-consensus-documents" name="guix/guix-consensus-documents" groups="guixproject,community" revision="refs/heads/main"/>
   <project path="guix-cuirass" name="guix/guix-cuirass" groups="guixproject,ci" revision="refs/heads/main"/>
