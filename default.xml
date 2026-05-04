@@ -30,6 +30,7 @@
   <project path="channels/saayix" name="look/saayix" groups="channels" remote="codeberg" revision="refs/heads/main"/>
   <project path="channels/small-guix" name="fishinthecalculator/small-guix" groups="channels" remote="codeberg" revision="refs/heads/main"/>
   <project path="channels/sops-guix" name="fishinthecalculator/sops-guix" groups="channels" remote="github" revision="refs/heads/main"/>
+  <project path="channels/guix-systole" name="SystoleOS/guix-systole" groups="channels" remote="github" revision="refs/heads/main"/>
   <project path="data-service" name="guix/data-service" groups="guixproject,ci" revision="refs/heads/trunk"/>
   <project path="dhcp" name="guix/dhcp" groups="guixproject"/>
   <project path="emacs-guix" name="guix/emacs-guix" groups="guixproject"/>
